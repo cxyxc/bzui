@@ -1,0 +1,14 @@
+.container {
+  :global(.ant-drawer-footer) {
+    text-align: right;
+    :global(.ant-btn) {
+      margin-right: 12px;
+    }
+  }
+}
+.leftAndRightLayoutContainer {
+  :global(.ant-drawer-body) {
+    display: flex;
+    padding: 0;
+  }
+}

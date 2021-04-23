@@ -1,0 +1,10 @@
+.container:global(.ant-form-item) {
+  margin-bottom: 0;
+  display: flex;
+  :global(.ant-space-item) {
+    line-height: 32px;
+  }
+  :global(.ant-form-item-label) {
+    line-height: 32px;
+  }
+}

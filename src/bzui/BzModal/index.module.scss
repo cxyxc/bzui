@@ -1,0 +1,35 @@
+.container {
+  :global {
+    .ant-modal-body {
+      max-height: calc(100vh - 174px);
+      // min-height: 360px;
+      overflow: auto;
+    }
+    .ant-modal-footer {
+      padding: 10px 24px;
+    }
+    .ant-modal-close {
+      right: 4px;
+    }
+  }
+}
+.container:global(.ant-modal-centered .ant-modal) {
+  padding: 0;
+}
+
+.simple {
+  :global {
+    .ant-modal-header {
+      border-bottom: 0;
+      padding: 16px 24px 12px 24px;
+    }
+    .ant-modal-body {
+      padding: 0 24px;
+      color: rgba(0, 0, 0, 0.65);
+    }
+    .ant-modal-footer {
+      border-top: 0;
+      padding: 10px 16px 16px 16px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.defaultContainer {
+  display: inline-block;
+  white-space: nowrap;
+  :global(.ant-tooltip-inner) {
+    white-space: normal;
+  }
+  .tagContainer {
+    display: inline-block;
+    border-radius: 14px;
+    padding: 1px 16px 1px 12px;
+  }
+  .success {
+    background-color: rgba($color: #52c41a, $alpha: 0.1);
+    color: #52c41a;
+    .dot {
+      background-color: #52c41a;
+    }
+  }
+  .error {
+    background-color: rgba($color: #f5222d, $alpha: 0.1);
+    color: #f5222d;
+    .dot {
+      background-color: #f5222d;
+    }
+  }
+  .default {
+    background-color: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.45);
+    .dot {
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+  }
+  .processing {
+    background-color: rgba($color: #1890ff, $alpha: 0.1);
+    color: #1890ff;
+    .dot {
+      background-color: #1890ff;
+    }
+  }
+  .warning {
+    background-color: rgba($color: #faad14, $alpha: 0.1);
+    color: #faad14;
+    .dot {
+      background-color: #faad14;
+    }
+  }
+}
+
+.textContainer {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 12px;
+
+  .tagContainer {
+    display: inline-block;
+  }
+  .success {
+    color: #52c41a;
+  }
+  .error {
+    color: #f5222d;
+  }
+  .default {
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .processing {
+    color: #1890ff;
+  }
+  .warning {
+    color: #faad14;
+  }
+}
+
+.dot {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.childrenContainer {
+  margin-left: 8px;
+  font-size: 12px;
+}
+.childrenTextDefault {
+  color: rgba(0, 0, 0, 0.45);
+}
+.childrenTextPrimary {
+  color: #52c41a;
+}

@@ -1,0 +1,9 @@
+.container {
+  :global {
+    // 提高权重
+    .ant-descriptions > .ant-descriptions-header > .ant-descriptions-title {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

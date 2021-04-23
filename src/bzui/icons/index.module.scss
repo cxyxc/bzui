@@ -1,0 +1,25 @@
+// 多图合并
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+// 右下
+.rightBottom {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+}
+
+// 文本图标样式
+.textIcon {
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #1890ff;
+  background: #e6f7ff;
+  border-radius: 2px;
+  border: 1px solid #91d5ff;
+}

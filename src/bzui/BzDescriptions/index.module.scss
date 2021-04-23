@@ -1,0 +1,41 @@
+.container {
+  white-space: pre-wrap; //  支持 \n 换行
+  :global {
+    .ant-descriptions-header {
+      margin-bottom: 16px;
+    }
+    .ant-descriptions-row > td,
+    .ant-descriptions-row > th {
+      padding-bottom: 8px;
+    }
+    .ant-descriptions-row:last-child > td,
+    .ant-descriptions-row:last-child > th {
+      padding-bottom: 0px;
+    }
+    .ant-descriptions-item-container .ant-descriptions-item-label {
+      color: rgba(0, 0, 0, 0.45);
+      display: inline-block;
+    }
+    .ant-descriptions-item-content {
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+
+  :global(.ant-descriptions-row)
+    > .descriptionsBlockItem:global(.ant-descriptions-item) {
+    padding-bottom: 16px;
+  }
+  :global(.ant-descriptions-row:last-child)
+    > .descriptionsBlockItem:global(.ant-descriptions-item) {
+    padding-bottom: 0px;
+  }
+}
+
+.descriptionsSubBlockItem
+  > :global(.ant-descriptions-item-container)
+  > :global(.ant-descriptions-item-label::after) {
+  display: none;
+}
+.descriptionsSubBlockItem > :global(.ant-descriptions-item-container) {
+  margin-top: -4px;
+}

@@ -1,0 +1,13 @@
+.spanContainer {
+  color: #1890ff;
+  cursor: pointer;
+}
+.popoverContainer :global(.ant-popover-title) {
+  padding: 5px 8px 4px;
+}
+.popoverContainer :global(.ant-popover-inner-content) {
+  padding: 8px 16px 16px 8px;
+}
+.popoverContent :global(.ant-descriptions-view table) {
+  width: auto; // 当 popover 中使用 descriptions 时，需要特殊处理
+}

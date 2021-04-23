@@ -1,0 +1,34 @@
+.container {
+  .header {
+    margin-bottom: 16px;
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+}
+
+// 表单详情模式
+.formDetail.container {
+  .header {
+    .title {
+      font-size: 14px;
+    }
+  }
+}
+
+// 用于 Card + Block 的复杂表单布局
+.inCard:not(:last-child) {
+  border-bottom: 1px solid #e9e9e9;
+}
+.inCard {
+  padding: 32px 32px 8px 32px;
+  .header {
+    .title {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+}

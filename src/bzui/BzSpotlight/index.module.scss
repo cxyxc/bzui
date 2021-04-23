@@ -1,0 +1,26 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+.spotlight {
+  position: absolute;
+
+  background: linear-gradient(to left, #ff4d4f, #ff4d4f) left top no-repeat,
+    linear-gradient(to bottom, #ff4d4f, #ff4d4f) left top no-repeat,
+    linear-gradient(to left, #ff4d4f, #ff4d4f) right top no-repeat,
+    linear-gradient(to bottom, #ff4d4f, #ff4d4f) right top no-repeat,
+    linear-gradient(to left, #ff4d4f, #ff4d4f) left bottom no-repeat,
+    linear-gradient(to bottom, #ff4d4f, #ff4d4f) left bottom no-repeat,
+    linear-gradient(to left, #ff4d4f, #ff4d4f) right bottom no-repeat,
+    linear-gradient(to left, #ff4d4f, #ff4d4f) right bottom no-repeat;
+  background-size: 2px 6px, 6px 2px, 2px 6px, 6px 2px;
+  background-color: #ffd2d3;
+}
+
+.tooltip {
+  white-space: nowrap;
+  :global(.ant-tooltip-inner) {
+    box-shadow: none;
+    padding: 5px 8px;
+  }
+}

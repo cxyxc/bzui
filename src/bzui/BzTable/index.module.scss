@@ -1,0 +1,115 @@
+.container {
+  :global {
+    .ant-table-thead > tr > th {
+      // 表头不换行
+      white-space: nowrap;
+    }
+    .ant-table-small .ant-table-footer,
+    .ant-table-small .ant-table-tbody > tr > td,
+    .ant-table-small .ant-table-thead > tr > th,
+    .ant-table-small .ant-table-title {
+      padding-left: 16px;
+    }
+    .ant-table-tbody > tr > td,
+    .ant-table-thead > tr > th,
+    .ant-table tfoot > tr > td,
+    .ant-table tfoot > tr > th {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    .ant-table-tbody > tr > td:local(.tableActionsExtra),
+    .ant-table-thead > tr > th:local(.tableActionsExtra),
+    .ant-table tfoot > tr > td:local(.tableActionsExtra),
+    .ant-table tfoot > tr > th:local(.tableActionsExtra) {
+      // 内部提高权重使其生效
+      padding-right: 72px;
+    }
+    .ant-table-tbody > tr > td:local(.tableIconColumn),
+    .ant-table-thead > tr > th:local(.tableIconColumn),
+    .ant-table tfoot > tr > td:local(.tableIconColumn),
+    .ant-table tfoot > tr > th:local(.tableIconColumn) {
+      // 内部提高权重使其生效
+      padding-left: 38px;
+    }
+    .ant-table-tbody > tr > td {
+      color: rgba(0, 0, 0, 0.65);
+    }
+    .ant-table-column-sorters {
+      padding: 0;
+    }
+    .ant-table-column-sorter-full {
+      margin-top: -0.6em;
+      margin-bottom: 0;
+      margin-left: 16px;
+    }
+    .ant-table-thead tr .ant-table-cell {
+      line-height: 25px;
+    }
+    .ant-table-small .ant-table-footer,
+    .ant-table-small .ant-table-tbody > tr > td,
+    .ant-table-small .ant-table-thead > tr > th,
+    .ant-table-small .ant-table-title {
+      padding: 16px;
+    }
+  }
+}
+
+.hasInsideBlock {
+  :global {
+    tr.ant-table-expanded-row .ant-descriptions-view table {
+      width: 100%;
+    }
+    .ant-table-row.ant-table-row-level-0 > td {
+      // 剔除下边框
+      border-bottom: 0;
+    }
+    .ant-table-row.ant-table-row-level-0
+      + .ant-table-row.ant-table-row-level-0
+      > td {
+      // 补偿额外被剔除的下边框
+      border-top: 1px solid #f0f0f0;
+    }
+    .ant-table-row.ant-table-row-level-0:last-child > td {
+      // 补偿额外被剔除的下边框
+      border-bottom: 1px solid #f0f0f0;
+    }
+    tr.ant-table-expanded-row:hover > td,
+    tr.ant-table-expanded-row > td {
+      background-color: #ffffff;
+    }
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      // 悬浮色
+      background: #ffffff;
+    }
+    .ant-table-tbody > tr.ant-table-row-selected > td {
+      // 选中色
+      background: #ffffff;
+    }
+  }
+}
+
+.insideBlock {
+  background: #fafafa;
+  padding: 16px;
+  margin-top: -16px;
+  margin-left: 46px;
+}
+
+// rowClassName
+.lastClickRowClassName {
+  background-color: rgba(24, 144, 255, 0.08);
+}
+:global(.ant-table-tbody)
+  > tr:global(.ant-table-row).lastClickRowClassName:hover
+  > td {
+  background-color: rgba(24, 144, 255, 0.08);
+}
+:global(table) .remindRowClassName {
+  // :global(table) 用于提升优先级
+  background-color: rgba(255, 77, 79, 0.08);
+}
+:global(table > .ant-table-tbody)
+  > tr:global(.ant-table-row).remindRowClassName:hover
+  > td {
+  background-color: rgba(255, 77, 79, 0.08);
+}

@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@bzui/*": ["./src/bzui/*"],
+      "@src/*": ["./src/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@housekeeper/*": ["./src/pages/HouserKeeper/*"],
+      "@components/*": ["./src/components/*"],
+      "@publicCss/*": ["./src/css/*"],
+      "@newHousekeeper/*": ["./src/pages/NewHousekeeper/*"],
+      "@csWorkorder/*": ["./src/pages/CSWorkOrder/*"],
+      "@InRecruitJob/*": ["./src/pages/InRecruitJob/*"],
+      "@customerSuccess/*": ["./src/pages/CustomerSuccess/*"],
+      "@common/*": ["./src/common/*"]
+    }
+  },
+  "rules": {
+    "no-implicit-dependencies": ["optional", ["src"]]
+  },
+  "include": ["src"]
+}

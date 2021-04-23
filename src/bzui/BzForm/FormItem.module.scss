@@ -1,0 +1,19 @@
+.detailMode {
+  :global(.ant-form-item-label > label) {
+    color: rgba(0, 0, 0, 0.45);
+  }
+  :global(.ant-form-item-control) {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}
+
+.isDescription:global(.ant-form-item) {
+  margin: 0 0 8px;
+  :global(.ant-form-item-label > label) {
+    height: 22px;
+  }
+  :global(.ant-form-item-control),
+  :global(.ant-form-item-control-input) {
+    min-height: 22px;
+  }
+}

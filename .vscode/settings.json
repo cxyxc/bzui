@@ -1,0 +1,31 @@
+{
+  "cSpell.words": [
+    "DLGJ",
+    "DTOS",
+    "Duliday",
+    "Workorder",
+    "antd",
+    "copyed",
+    "desp",
+    "flist",
+    "myfetch",
+    "packup",
+    "setactive",
+    "setcopy",
+    "setface",
+    "setnow",
+    "setopen",
+    "settest",
+    "setuser",
+    "setvideo",
+    "setvisible",
+    "sider",
+    "uniqid",
+    "uploader",
+    "uploadphotowall"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  // "editor.formatOnSave": true
+}

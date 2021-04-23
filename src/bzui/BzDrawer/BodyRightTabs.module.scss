@@ -1,0 +1,26 @@
+/* 刻意使用 ID 提高样式权重 */
+#container {
+  flex: 1 1 900px;
+  align-self: baseline;
+  background-color: #f2f2f2;
+  min-height: -webkit-fill-available;
+
+  :global(.ant-tabs-nav) {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+
+  :global(.ant-tabs-nav .ant-tabs-nav-wrap) {
+    padding-left: 24px;
+    border-left: none;
+    background-color: #ffffff;
+  }
+
+  :global(.ant-tabs-content-holder) {
+    margin: 70px 24px 24px 24px;
+    padding: 24px;
+    background-color: #ffffff;
+    flex: none;
+  }
+}

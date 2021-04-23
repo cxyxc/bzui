@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-self: start;
+}
+.columnContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.rowContainer {
+  display: flex;
+  align-content: space-between;
+}
+
+.item {
+  position: relative;
+}
+.item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.bigText {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.defaultText {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.icon {
+  margin-top: 2px;
+}
+.iconAbsolute {
+  position: absolute;
+  left: 12px;
+}
