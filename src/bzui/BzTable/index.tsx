@@ -1,18 +1,19 @@
-import React, { ReactNode } from 'react';
-import { Table as AntdTable } from 'antd';
-import classnames from 'classnames';
-import styles from './index.module.scss';
-import { ColumnCell, ColumnCellItem } from './ColumnCell';
-import { BzColumnAction, BzColumnActionItem } from './ColumnAction';
-import { covertReactChildrenToArray } from '../utils/covertReactChildrenToArray';
-import { useRowClassName } from './hooks/useRowClassName';
+import React, { ReactNode } from "react";
+import { Table as AntdTable } from "antd";
+import classnames from "classnames";
+import styles from "./index.module.scss";
+import { ColumnCell, ColumnCellItem } from "./ColumnCell";
+import { BzColumnAction, BzColumnActionItem } from "./ColumnAction";
+import { covertReactChildrenToArray } from "../utils/covertReactChildrenToArray";
+import { useRowClassName } from "./hooks/useRowClassName";
 import {
   BzColumnProps,
   BzColumnsType,
   BzColumnType,
   BzTableProps,
-} from './interfaces';
-import { useInsideBlock } from './hooks/useInsideBlock';
+} from "./interfaces";
+import { useInsideBlock } from "./hooks/useInsideBlock";
+import moment from "moment";
 
 // 表格图标列的 column 常量
 const TABLE_ICON_COLUMN = Object.freeze({
@@ -20,9 +21,9 @@ const TABLE_ICON_COLUMN = Object.freeze({
 });
 // 表格操作列的 column 常量
 const TABLE_ACTIONS_COLUMN = Object.freeze({
-  title: '操作',
-  dataIndex: 'actions',
-  align: 'right',
+  title: "操作",
+  dataIndex: "actions",
+  align: "right",
 });
 // 表格操作列(带有额外)的 column 常量
 const TABLE_ACTIONS_COLUMN_EXTRA = Object.freeze({
@@ -83,16 +84,34 @@ export function BzTable<RecordType extends DefaultRecordType>(
     return result
       .filter((item) => !item.hidden)
       .map((columnProps: BzColumnType<RecordType>) => {
-        const { hasIcon, hasAction, ...otherColumnProps } = columnProps;
+        const {
+          hasIcon,
+          hasAction,
+          valueEnum,
+          valueType,
+          ...otherColumnProps
+        } = columnProps;
         const hasBeforeIconProps = hasIcon === true ? TABLE_ICON_COLUMN : {};
         const hasActionProps = hasAction === true ? TABLE_ACTIONS_COLUMN : {};
         const hasExtraActionProps =
-          hasAction === 'extra' ? TABLE_ACTIONS_COLUMN_EXTRA : {};
+          hasAction === "extra" ? TABLE_ACTIONS_COLUMN_EXTRA : {};
+        const renderProps = valueEnum
+          ? {
+            render: (value: number) =>
+              valueEnum.find((item) => item.value === value)?.label,
+          }
+          : valueType === "dateTime"
+            ? {
+              render: (value: string) =>
+                moment(value).format("YYYY/MM/DD HH:mm"),
+            }
+            : {};
 
         return {
           ...hasBeforeIconProps,
           ...hasActionProps,
           ...hasExtraActionProps,
+          ...renderProps,
           ...otherColumnProps,
         };
       });

@@ -1,6 +1,6 @@
-import { DescriptionsProps } from 'antd/lib/descriptions';
-import { DescriptionsItemProps } from 'antd/lib/descriptions/Item';
-import { CSSProperties, ReactElement, ReactNode } from 'react';
+import { DescriptionsProps } from "antd/lib/descriptions";
+import { DescriptionsItemProps } from "antd/lib/descriptions/Item";
+import { CSSProperties, ReactElement, ReactNode } from "react";
 
 export interface BzDescriptionsItemProps extends DescriptionsItemProps {
   hasBlock?: boolean; // 包含了 InsideBlock
@@ -22,7 +22,10 @@ export interface BzDescriptionsProps extends DescriptionsProps {
   itemRender?: BzDescriptionsItemRender;
   children?: ReactNode;
 }
-export interface BzDescriptionsProviderProps extends BzDescriptionsProps {}
+export interface BzDescriptionsProviderProps extends BzDescriptionsProps {
+  noDefaultStyle?: boolean;
+  wrapperStyle?: CSSProperties;
+}
 export interface BzInsideBlockProps {
   title?: ReactNode;
   copyable?: boolean;

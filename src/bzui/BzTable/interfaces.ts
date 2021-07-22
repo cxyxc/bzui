@@ -1,21 +1,23 @@
-import { ExpandableConfig } from 'antd/es/table/interface';
-import { ColumnProps, ColumnType, TableProps } from 'antd/lib/table';
-import { ReactNode } from 'react';
+import { ExpandableConfig } from "antd/es/table/interface";
+import { ColumnProps, ColumnType, TableProps } from "antd/lib/table";
+import { ReactNode } from "react";
 
 type DefaultRecordType = Record<string, any>;
 
 export interface BzColumnType<RecordType> extends ColumnType<RecordType> {
   hasIcon?: true; // 有前置 Icon
-  hasAction?: true | 'extra'; // true 有操作列 extra 有【...】额外操作列
+  hasAction?: true | "extra"; // true 有操作列 extra 有【...】额外操作列
   hidden?: boolean; // 标识表格列的显示
+  valueEnum?: Array<{ label: string; value: number }>;
+  valueType?: "date" | "dateTime" | "digit";
 }
 export interface BzColumnProps<RecordType> extends ColumnProps<RecordType> {
   hasIcon?: true; // 有前置 Icon
-  hasAction?: true | 'extra'; // true 有操作列 extra 有【...】额外操作列
+  hasAction?: true | "extra"; // true 有操作列 extra 有【...】额外操作列
   hidden?: boolean; // 标识表格列的显示
 }
 export interface BzColumnGroupType<RecordType>
-  extends Omit<BzColumnType<RecordType>, 'dataIndex'> {
+  extends Omit<BzColumnType<RecordType>, "dataIndex"> {
   children: BzColumnsType<RecordType>;
 }
 export interface BzColumnProps<RecordType> extends BzColumnType<RecordType> {
